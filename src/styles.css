@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+
+input {
+    border: 0px;
+}
+
+input:focus {
+    border-bottom: 1px solid #000;
+    outline: none;
+}
+
+ul {
+    position: relative;
+}
+
+li {
+    padding: 0.1em;
+}
+
+.hover:hover::before {
+    content: '>';
+    position: absolute;
+    clear: both;
+    left: 10px;
+    font-weight: bolder;
+    transform: rotate(90deg);
+}
+
+
+.collapsed:hover::before {
+    transform: rotate(0deg);
+}

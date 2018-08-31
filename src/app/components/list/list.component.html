@@ -1,0 +1,6 @@
+<ul>
+  <li *ngFor="let input of inputArray; let i = index" [ngClass]="{'hover': input.subchild}">
+    <input type="text" [id]="input.id" [(ngModel)]="input.text" (keydown)="clickAction($event , input, i)" />
+    <app-list *ngIf="input.subchild" class="collapse in" [inputArray]="input.subchild" (action)="action1($event)"></app-list>
+  </li>
+</ul>
